@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+}
+
+/*.background-video {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1
+}
+
+.background-video video {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}*/
+
+.control-container {
+	padding: 50px;
+	position: relative;
+}
+
+.md-button.md-fab.control-button {
+	width: 100px;
+	height: 100px;
+}
+
+.control-circular {
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+	top: 30px;
+}
+
+.control-setting {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	margin: 0;
+}
+
+.control-info {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	margin: 0;
+}
+
+.control-help {
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	margin: 0;
+}
+
+.stat {
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	color:grey;
+	font-size: 12px;
+}
+
+.stat p {
+	margin: 0;
+	text-align: center;
+}
+
+.control-chart {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	margin: 0;
+}
+
+.pool-select {
+	margin: 0 10px;
+}
+
+.pool-select .md-text {
+	color: rgb(63,81,181)
+}
+
+.pool-form {
+	padding: 10px;
+}
+
+.pool-form md-input-container {
+	margin: 0;
+}
+
+.pool-form md-input-container .md-errors-spacer {
+	min-height: 15px;
+}
+
+.pool-list {
+	height: 300px;
+	padding: 10px;
+}
+
+.pool-list-item {
+	text-align: left;
+	text-transform: none;
+	width: 100%;
+    margin: 0;
+}
+
+.pool-list-item.selected {
+	background: rgb(63,81,181);
+	color:white;
+}
+
+.pool-add-button,.pool-save-button {
+	width: 100%;
+	margin: 10px 0;
+}

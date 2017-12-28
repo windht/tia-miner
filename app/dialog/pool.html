@@ -1,0 +1,63 @@
+<md-dialog aria-label="Pool">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Pools</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.cancel()">
+          <md-icon aria-label="Close dialog">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div layout="row" layout-align="center center">
+        <div layout="column" flex="50" layout-align="start start" class="pool-list">
+          <md-button class="pool-list-item" ng-repeat="pool in vm.pools track by $index" ng-click="vm.pool = pool" ng-class="{'selected':vm.pool==pool}">
+            {{pool.name}}
+          </md-button>
+          <md-button class="md-primary md-raised pool-add-button" ng-click="vm.pools.push({name:'New Pool',id:vm.guid()});vm.pool=vm.pools[vm.pools.length-1]">Add</md-button>
+        </div>
+
+        <div class="pool-form" layout="column" flex="50">
+          <h4>Pool Info</h4>
+          <md-input-container>
+              <label>Pool Name</label>
+              <input type="text" ng-model="vm.pool.name" placeholder="">
+          </md-input-container>
+          <md-input-container>
+              <label>Server</label>
+              <input type="text" ng-model="vm.pool.server" placeholder="">
+          </md-input-container>
+          <md-input-container>
+              <label>Port</label>
+              <input type="text" ng-model="vm.pool.port" placeholder="">
+          </md-input-container>
+          <md-input-container>
+              <label>User</label>
+              <input type="text" ng-model="vm.pool.user" placeholder="">
+          </md-input-container>
+          <md-input-container>
+              <label>Password</label>
+              <input type="text" ng-model="vm.pool.pass" placeholder="">
+          </md-input-container>
+
+          <div layout="row" layout-align="center center">
+            <span>Currency</span>
+            <md-select ng-model="vm.pool.currency" placeholder="Select" class="md-no-underline pool-select" ng-model-options="{trackBy: '$value.slug'}">
+              <md-option ng-repeat="pool in vm.pool_list track by $index" ng-value="pool">{{pool.name}}</md-option>
+            </md-select>
+          </div>
+
+          <div layout="row">
+              <md-button class="md-primary md-raised pool-save-button" ng-click="vm.save()">Save</md-button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div>
+        <span flex></span>
+        <md-button class="md-primary md-raised" ng-click="vm.save()">
+          Save
+        </md-button>
+      </div> -->
+    </md-dialog-content>
+</md-dialog>

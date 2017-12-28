@@ -1,0 +1,43 @@
+{
+  "pools": [
+    {
+      "id": 1,
+      "name": "BTG",
+      "server": "btg.suprnova.cc",
+      "port": "8816",
+      "user": "windht.office",
+      "pass": "ht930531",
+      "currency": {
+        "name": "BTG",
+        "slug": "bitcoin-gold",
+        "wtm_id": 214
+      }
+    },
+    {
+      "id": 2,
+      "name": "ZEC",
+      "server": "stratum-zec.antpool.com",
+      "port": "8899",
+      "user": "TheBuilder.2",
+      "pass": "x",
+      "currency": {
+        "name": "ZEC",
+        "slug": "zcash",
+        "wtm_id": 166
+      }
+    },
+    {
+      "name": "ZEN",
+      "id": "556343e7-f3cb-2ab7-fb8b-f860eb1b7cad",
+      "server": "zen.suprnova.cc",
+      "port": "3618",
+      "user": "windht.home",
+      "pass": "ht930531",
+      "currency": {
+        "name": "ZEN",
+        "slug": "zencash",
+        "wtm_id": 185
+      }
+    }
+  ]
+}

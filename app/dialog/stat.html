@@ -1,0 +1,34 @@
+<md-dialog aria-label="Stat">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Stat</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.cancel()">
+          <md-icon aria-label="Close dialog">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content" layout="column" layout-align="center center">
+        <h4>GPUs</h4>
+        <table style="width:100%;text-align: center;" ng-if="vm.stat && vm.stat.result.length>0">
+          <tr>
+            <th>GPU</th>
+            <th>Temperature</th> 
+            <th>Power</th>
+            <th>Speed</th>
+          </tr>
+          <tr ng-repeat="gpu in vm.stat.result">
+            <td>{{gpu.name}}</td>
+            <td>{{gpu.temperature}}</td> 
+            <td>{{gpu.gpu_power_usage}}</td>
+            <td>{{gpu.speed_sps}}</td>
+          </tr>
+          
+        </table>
+        <p ng-if="!vm.stat || vm.stat.result.length==0" style="color:grey;font-size: 12px">No GPU Working</p>
+
+        <p>Total Speed: <b>{{vm.stat.total_speed}} KSol/s</b> Total Power: <b>{{vm.stat.total_power}}W</b></p>
+      </div>
+    </md-dialog-content>
+</md-dialog>

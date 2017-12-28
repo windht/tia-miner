@@ -1,0 +1,1 @@
+miner.exe --server btg.suprnova.cc --port 8816 --user windht.office --pass ht930531 --pec --fee 0

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TIA-Miner</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="app/style/app.css">
+</head>
+
+<body ng-app="TIA-Miner" ng-cloak ng-controller="MainCtrl as vm" layout="column" layout-align="center center">
+
+    <!-- Control Zone -->
+    <div layout="row" layout-align="center center" class="control-container">
+        <md-button class="md-fab md-primary control-button" aria-label="FAB" ng-click="vm.toggle()">
+            {{vm.controlButtonText}}
+        </md-button>
+        <md-progress-circular class="control-circular" ng-if="vm.start" class="md-hue-2" md-diameter="150px"></md-progress-circular>
+    </div>
+
+    <div layout="row" layout-align="center center">
+      <p>Mining From Pool</p>
+      <md-select ng-disabled="vm.start" ng-model="vm.pool" ng-model-options="{trackBy: '$value.id'}" placeholder="Select A Pool" class="md-no-underline pool-select">
+        <md-option ng-repeat="pool in vm.pools track by $index" ng-value="pool"><b>{{pool.name}}</b></md-option>
+      </md-select>
+    </div>
+
+    <div layout="row" layout-align="center center">
+        <p>Currently Mining <b>{{vm.pool.currency.name}}({{vm.pool.currency.slug}})</b></p>
+    </div>
+    <md-button class="md-icon-button control-help" ng-click="vm.showFAQ($event)">
+      <md-icon>help</md-icon>
+    </md-button>
+
+    <md-button class="md-icon-button control-setting" ng-click="vm.showPool($event)">
+      <md-icon>settings</md-icon>
+    </md-button>
+
+    <md-button class="md-icon-button control-chart" ng-click="vm.showStat($event)">
+      <md-icon>show_chart</md-icon>
+    </md-button>
+
+    <md-button class="md-icon-button control-info" ng-click="vm.showInfo($event)">
+      <md-icon>info</md-icon>
+    </md-button>
+
+    <span class="stat" layout="column">
+        <p ng-show="vm.profit"><b style="font-size: 20px;">{{vm.profit | number:4}}</b>USD/24 Hours</p>
+        <p>Speed:{{vm.stat.total_speed}}KSol/s Power:{{vm.stat.total_power}}W</p>
+    </span>
+
+    
+    
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <!-- Application bootstrap  -->
+    <script src="app/js/app.js"></script>
+</body>
+
+</html>
