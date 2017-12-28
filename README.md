@@ -14,6 +14,9 @@ It is more than a simple GUI:
 
 You can learn more about the TIA Miner GPU Hardware at [product page](https://thebuilder.hk/tia-miner/).
 
+## Screenshots
+![TIA-Miner](https://raw.githubusercontent.com/windht/tia-miner/master/miner.png)
+
 ## To Use
 
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
