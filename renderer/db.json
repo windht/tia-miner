@@ -6,7 +6,7 @@
       "server": "btg.suprnova.cc",
       "port": "8816",
       "user": "windht.office",
-      "pass": "ht930531",
+      "pass": "x",
       "currency": {
         "name": "BTG",
         "slug": "bitcoin-gold",
@@ -32,7 +32,7 @@
       "server": "zen.suprnova.cc",
       "port": "3618",
       "user": "windht.home",
-      "pass": "ht930531",
+      "pass": "x",
       "currency": {
         "name": "ZEN",
         "slug": "zencash",
